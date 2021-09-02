@@ -1,0 +1,1 @@
+In the following repository, I created a very simple healthcare app to better my understanding in Object Oriented Programming using C++.
