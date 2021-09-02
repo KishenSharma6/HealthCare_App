@@ -1,4 +1,7 @@
 #include <iostream>
+#include "headers/human.h"
+#include "headers/physician.h"
+
 
 #define inch_to_cm(x)((x * 2.54) /100)
 #define lb_to_kg(x)(x / 2.20462)
@@ -27,17 +30,20 @@ void isPatientHealthy(float bmi){
 
 };
 int main(){
-    cout << "Input patient height in inches: ";
-    cin >> height_inches;
-    meters= inch_to_cm(height_inches);
-    cout << "Patient is "<< meters << " meters." << endl;
+    // cout << "Input patient height in inches: ";
+    // cin >> height_inches;
+    // meters= inch_to_cm(height_inches);
+    // cout << "Patient is "<< meters << " meters." << endl;
 
-    cout << "Input patient weight in pounds: ";
-    cin >> weight_lbs;
-    kg= lb_to_kg(weight_lbs);
-    cout << "Patient weighs "<< kg << " kg." << endl;
+    // cout << "Input patient weight in pounds: ";
+    // cin >> weight_lbs;
+    // kg= lb_to_kg(weight_lbs);
+    // cout << "Patient weighs "<< kg << " kg." << endl;
 
-    cout<< "Patient's BMI is " << patient_bmi(kg, meters) << endl;
-    isPatientHealthy(patient_bmi(kg, meters));
+    // cout<< "Patient's BMI is " << patient_bmi(kg, meters) << endl;
+    // isPatientHealthy(patient_bmi(kg, meters));
+
+    Human person1("Jim", 38, "Physician");
+    person1.introduction();
     return 0;
 }
