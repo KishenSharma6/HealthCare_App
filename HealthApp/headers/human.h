@@ -12,7 +12,6 @@ public:
     string Role;
 
     Human(){
-
     };
     Human(string name, int age, string role){
         Name= name;
@@ -28,7 +27,7 @@ public:
         }
         
     };
-
+    
 };
 
 #endif
