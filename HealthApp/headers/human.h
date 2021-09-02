@@ -11,6 +11,9 @@ public:
     int Age;
     string Role;
 
+    Human(){
+
+    };
     Human(string name, int age, string role){
         Name= name;
         Age= age;
@@ -19,7 +22,7 @@ public:
     void introduction(){
         if (Role == "Physician"){
             cout << "Hi there, I am Dr." <<Name << " and I am your phsycian for today's visit" << endl;
-        } else if (Role == "Patient")
+        } else 
         {
             cout << "Hi, my name is " << Name<< endl;
         }
