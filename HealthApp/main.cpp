@@ -1,6 +1,7 @@
 #include <iostream>
 #include "headers/human.h"
 #include "headers/physician.h"
+#include "headers/patient.h"
 
 
 #define inch_to_cm(x)((x * 2.54) /100)
@@ -45,5 +46,9 @@ int main(){
 
     Human person1("Jim", 38, "Physician");
     person1.introduction();
+
+    Patient person2(33, 33, 85, 69, 139);
+    person2.Name = "Igor";
+    person2.introduction();
     return 0;
 }
