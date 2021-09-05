@@ -50,5 +50,6 @@ int main(){
     Patient person2(33, 33, 85, 69, 139);
     person2.Name = "Igor";
     person2.introduction();
+    person2.blood_pressure();
     return 0;
 }
