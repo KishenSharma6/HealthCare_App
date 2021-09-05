@@ -23,6 +23,23 @@ public:
     {
         cout<<"Patient is healthy" << endl;
     }
+    int evaluate_bp(){
+        if (Systolic < 120 & Diastolic < 80){
+            cout << "Blood pressure is Normal" << endl;
+        } else if (129 >= Systolic & Diastolic < 80)
+        {
+            cout << "Blood pressure is Elevated" << endl;
+        } else if (139 >= Systolic | 89 >= Diastolic){
+            cout << "High blood pressure STAGE 1 - Hypertension" << endl;
+        } else if ((180 > Systolic | 120 > Diastolic))
+        {
+            cout << "High blood pressure STAGE 2 - Hypertension" << endl;
+        } else{
+            cout << "Hypertensive Crisis - Please consult a Cardiologist immediately" << endl;
+        }
+        
+        return 0;
+    }
 
 };
 };
