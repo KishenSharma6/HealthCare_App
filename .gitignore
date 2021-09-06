@@ -35,5 +35,9 @@ test
 #VSCode
 *vscode/*
 
+<<<<<<< HEAD
 #Misc
+=======
+#MISC
+>>>>>>> main
 TO_DO.txt
