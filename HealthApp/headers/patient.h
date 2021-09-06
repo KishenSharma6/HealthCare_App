@@ -17,17 +17,11 @@ private: //Should this information be private?
     int RestHR;
     float height_inches;
     float weight_lbs;
-<<<<<<< HEAD
    
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
     };
 
-=======
-
-    
-    
->>>>>>> 5fef680db467255054417a64dd0bed721552a2ad
     
 
 };

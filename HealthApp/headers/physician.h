@@ -22,15 +22,9 @@ public:
     } else if (bmi <25)
     {
         cout<<"Patient is healthy" << endl;
-<<<<<<< HEAD
-    }
-};
-    int evaluate_bp(int Systolic, int Diastolic ){
-=======
     }}
     
     int evaluate_bp(int Systolic, int Diastolic){
->>>>>>> 5fef680db467255054417a64dd0bed721552a2ad
         if (Systolic < 120 & Diastolic < 80){
             cout << "Blood pressure is Normal" << endl;
         } else if (129 >= Systolic & Diastolic < 80)
@@ -47,11 +41,7 @@ public:
         
         return 0;
     }
-<<<<<<< HEAD
-};
-=======
 
 };
 
->>>>>>> 5fef680db467255054417a64dd0bed721552a2ad
 #endif
