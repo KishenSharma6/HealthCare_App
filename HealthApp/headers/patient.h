@@ -48,6 +48,33 @@ private: //Should this information be private?
         cin >> weight_lbs;
 
     }
+    void patient_symptoms(){
+        //Collect patient symptoms
+        cout<<"Input symptoms patient is suffering from. Enter \"-1\" when completed" << endl;
+        
+        //string termination = "-1";
+        string temp; //Hold user input to append to Symptoms 
+            
+        while (cin >> temp) {
+            Symptoms.push_back(temp);
+        }
+        cout << "Patient Symptoms are as follows:" << endl;
+        for (auto i :Symptoms){
+            cout << v << ", " << endl;
+        }
+
+        cout << "Are these correct? Y/N" << endl;
+        if (cin == "Y"){
+            patient_symptoms();
+        }
+        else if (cin == "N"){
+            cout <<"Confirmed" << endl;
+        }
+        else{
+            cout << "Invalid input" << endl;
+        };
+        
+        }
 
 };
 
