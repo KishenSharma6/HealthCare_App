@@ -50,5 +50,9 @@ int main(){
     Human person2();
     person2.Name = "Igor";
     person2.introduction();
+<<<<<<< HEAD
+=======
+    
+>>>>>>> main
     return 0;
 }
