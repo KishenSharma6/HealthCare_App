@@ -17,16 +17,11 @@ public: //Should this information be private?
     int RestHR;
     float height_inches;
     float weight_lbs;
-
-    Patient(int systolic, int diastolic, int pulse, float height, float weight){
-        Systolic= systolic;
-        Diastolic= diastolic;
-        RestHR= pulse;
-        height_inches= height;
-        weight_lbs= weight;
-
+   
+    Patient(){
+        cout<< "Patient does not have attributes"<< endl;
     };
-    
+
     
 
 };
