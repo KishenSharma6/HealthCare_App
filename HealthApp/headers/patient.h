@@ -41,6 +41,12 @@ private: //Should this information be private?
         cout << "Enter patient Resting Heart Rate(BPM):"<<endl;
         cin >> RestHR;
 
+        cout << "Enter patient height(inches):"<<endl;
+        cin >> height_inches;
+
+        cout << "Enter patient weight(pounds):"<<endl;
+        cin >> weight_lbs;
+
     }
 
 };
