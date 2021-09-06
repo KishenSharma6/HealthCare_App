@@ -11,17 +11,23 @@
 using namespace std;
 
 class Patient: public Human{
-public: //Should this information be private?
+private: //Should this information be private?
     int Systolic;
     int Diastolic;
     int RestHR;
     float height_inches;
     float weight_lbs;
+<<<<<<< HEAD
    
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
     };
 
+=======
+
+    
+    
+>>>>>>> 5fef680db467255054417a64dd0bed721552a2ad
     
 
 };
