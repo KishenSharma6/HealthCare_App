@@ -47,9 +47,9 @@ int main(){
     Human person1("Jim", 38, "Physician");
     person1.introduction();
 
-    Patient person2(33, 33, 85, 69, 139);
+    Human person2();
     person2.Name = "Igor";
     person2.introduction();
-    person2.blood_pressure();
+    
     return 0;
 }
