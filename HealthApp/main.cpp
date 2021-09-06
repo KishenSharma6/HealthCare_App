@@ -47,12 +47,8 @@ int main(){
     Human person1("Jim", 38, "Physician");
     person1.introduction();
 
-    Human person2();
+    Human person2;
     person2.Name = "Igor";
     person2.introduction();
-<<<<<<< HEAD
-=======
-    
->>>>>>> main
     return 0;
 }
