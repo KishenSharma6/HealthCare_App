@@ -15,16 +15,16 @@ public:
     int Age;
     string Occupation;
 
-
-
     Human(){
-        cout << "Patient attributes have not been included" << endl;
+        cout << "Person attributes have not been included" << endl;
     };
+
     Human(string name, int age, string occupation){
         Name= name;
         Age= age;
         Occupation= occupation;
     };
+    
     void introduction(){
         cout << "Hi, my name is " << Name<< endl;
                
