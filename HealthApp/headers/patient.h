@@ -19,7 +19,7 @@ private: //Should this information be private?
     float height_inches;
     float weight_lbs;
     list<string> Symptoms;
-   
+public:   
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
     };
