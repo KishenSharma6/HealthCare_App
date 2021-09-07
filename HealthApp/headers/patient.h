@@ -60,14 +60,16 @@ private: //Should this information be private?
         }
         cout << "Patient Symptoms are as follows:" << endl;
         for (auto i :Symptoms){
-            cout << v << ", " << endl;
+            cout << i << ", " << endl;
         }
 
         cout << "Are these correct? Y/N" << endl;
-        if (cin == "Y"){
+        string response;
+        cin >> response;
+        if (response == "Y"){
             patient_symptoms();
         }
-        else if (cin == "N"){
+        else if (response == "N"){
             cout <<"Confirmed" << endl;
         }
         else{
