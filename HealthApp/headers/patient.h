@@ -7,7 +7,7 @@
 #include "human.h"
 #include "physician.h"
 #include <iostream>
-#include <list>;
+#include <list>
 
 using namespace std;
 
