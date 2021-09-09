@@ -19,11 +19,15 @@ private: //Should this information be private?
     float height_inches;
     float weight_lbs;
     list<string> Symptoms;
+
 public:   
+    //Constructors
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
     };
-
+    Patient(string name, int age, string occupation): Human(name,  age, occupation){
+        cout << "Patient attributes set" << endl;
+    };
     int heart_metrics(){
         //Capture Patient Systolic & Diastolic
         cout << "Enter patient Systolic Blood Pressure:"<<endl;
@@ -37,6 +41,12 @@ public:
 
         return 0;
     }
+    int return_systolic(){
+        return Systolic;
+    }
+    int return_diastolic(){
+        return Diastolic;
+    }
     void biometrics(){
         cout << "Enter patient Resting Heart Rate(BPM):"<<endl;
         cin >> RestHR;
@@ -47,8 +57,15 @@ public:
         cout << "Enter patient weight(pounds):"<<endl;
         cin >> weight_lbs;
 
+    }   
+    int return_height_inches(){
+        return height_inches;
     }
-    void patient_symptoms(){
+    int return_weight_lbs(){
+        return weight_lbs;
+    } 
+
+    void collect_symptoms(){
         //Collect patient symptoms
         cout<<"Input symptoms patient is suffering from. Enter \"-1\" when completed" << endl;
         
@@ -57,27 +74,39 @@ public:
             
         while (cin >> temp) {
             Symptoms.push_back(temp);
-        }
-        cout << "Patient Symptoms are as follows:" << endl;
+            if (temp == "-1"){
+                Symptoms.pop_back();
+                break;
+            };
+        }}
+    void verify_symptoms(){
+        cout << "Patient Symptoms were input as follows:" << endl;
         for (auto i :Symptoms){
-            cout << i << ", " << endl;
+            cout << i <<endl;
         }
 
-        cout << "Are these correct? Y/N" << endl;
+        cout << "Are these symptoms correct? Y/N" << endl;
         string response;
         cin >> response;
-        if (response == "Y"){
-            patient_symptoms();
+        if (response == "N"){
+            cout << "Clearing Patient Symptoms. ";
+            collect_symptoms();
         }
-        else if (response == "N"){
+        else if (response == "Y"){
             cout <<"Confirmed" << endl;
         }
         else{
             cout << "Invalid input" << endl;
+            verify_symptoms();
         };
         
         }
-
+    void read_symptoms(){
+        cout << "Patient Symptoms are as follows:" << endl;
+        for (auto i :Symptoms){
+            cout << i <<endl;
+        }
+    }
 };
 
 #endif
