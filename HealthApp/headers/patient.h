@@ -7,7 +7,7 @@
 #include "human.h"
 #include "physician.h"
 #include <iostream>
-#include <list>;
+#include <list>
 
 using namespace std;
 
@@ -22,6 +22,9 @@ private: //Should this information be private?
 public:   
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
+    };
+    Patient(string name, int age, string occupation): Human(name,  age, occupation){
+        cout << "Patient attributes set" << endl;
     };
 
     int heart_metrics(){
@@ -57,6 +60,9 @@ public:
             
         while (cin >> temp) {
             Symptoms.push_back(temp);
+            if (temp == "-1"){
+                break;
+            };
         }
         cout << "Patient Symptoms are as follows:" << endl;
         for (auto i :Symptoms){
@@ -66,10 +72,10 @@ public:
         cout << "Are these correct? Y/N" << endl;
         string response;
         cin >> response;
-        if (response == "Y"){
+        if (response == "N"){
             patient_symptoms();
         }
-        else if (response == "N"){
+        else if (response == "Y"){
             cout <<"Confirmed" << endl;
         }
         else{
