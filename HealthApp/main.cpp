@@ -10,8 +10,11 @@
 
 using namespace std;
     
- main(){
-    Human person1("Jim", 38, "Physician");
-    person1.introduction();
+ int main(){
+    Patient patient1("Henry", 23, "Fireman");
+    patient1.introduction();
+    patient1.collect_symptoms();
+    patient1.verify_symptoms();
+
     return 0;
 }
