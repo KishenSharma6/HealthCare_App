@@ -71,9 +71,15 @@ public:
     }
 
     void check_COVID(list<string> patient_symptoms, list<string> covid_symptoms){
-        
-        
-        if (std::find(begin(patient_symptoms), end(patient_symptoms), myinput) != std::end(patient_symptoms));
+        int counter;
+        for (_List_iterator i= patient_symptoms.begin(); i != patient_symptoms.end(); i++){
+            if (std::find(covid_symptoms.begin(), covid_symptoms.end(), i) != covid_symptoms.end()){
+                counter ++;
+            }
+        }
+        if (counter > 3){
+            cout << "I am goint to order you a COVID test today just to be safe" << endl;
+        } 
 
     };
 };
