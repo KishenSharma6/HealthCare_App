@@ -1,5 +1,4 @@
 #include <iostream>
-#include <list>
 #include "physician.h"
 using namespace std;
 
@@ -7,22 +6,18 @@ using namespace std;
 #define HUMAN_H
 class Human
 {
-private:
-    list<string> UnderlyingConditions;
-
 public:
     string Name;
     int Age;
-    string Occupation;
+    
 
     Human(){
-        cout << "Person attributes have not been included" << endl;
+        cout << "Human attributes have not been included" << endl;
     };
 
-    Human(string name, int age, string occupation){
+    Human(string name, int age){
         Name= name;
         Age= age;
-        Occupation= occupation;
     };
     
     void introduction(){
