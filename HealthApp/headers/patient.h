@@ -22,7 +22,7 @@ public:
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
     };
-    Patient(string name, int age, string occupation): Human(name, age){
+    Patient(string name, int age): Human(name, age){
         cout << "Patient attributes set" << endl;
     };
     int heart_metrics(){
