@@ -1,6 +1,3 @@
-//Create class for patient being checked in at hospital
-// Patient should have vitals collected by nurse (height, weight, BP, and resting heart rate) and name/age
-// Patient vitals should probably be private
 #ifndef PATIENT_H
 #define PATIENT_H
 
@@ -25,7 +22,7 @@ public:
     Patient(){
         cout<< "Patient does not have attributes"<< endl;
     };
-    Patient(string name, int age, string occupation): Human(name,  age, occupation){
+    Patient(string name, int age, string occupation): Human(name, age){
         cout << "Patient attributes set" << endl;
     };
     int heart_metrics(){
