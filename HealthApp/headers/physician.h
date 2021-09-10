@@ -3,16 +3,20 @@
 #define PHYSICIAN_H
 
 #include <iostream>
+#include "human.h"
 
 using namespace std;
-#include "human.h"
+
+#define inch_to_cm(x)((x * 2.54) /100)
+#define lb_to_kg(x)(x / 2.20462)
+#define patient_bmi(kg, meters)(kg/(meters * meters))
 
 class Physcian:public Human{
 public:
     string LastName;
     string Specialization;
     string MedicalSchool;    
-    
+
     void isPatientHealthy(float bmi){
     if (bmi >= 30){
         cout<< "Patient is obese" << endl;
