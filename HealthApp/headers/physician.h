@@ -2,8 +2,11 @@
 #ifndef PHYSICIAN_H
 #define PHYSICIAN_H
 
-#include <iostream>
 #include "human.h"
+
+#include <iostream>
+#include <list>
+#include <algorithm>
 
 using namespace std;
 
@@ -16,8 +19,28 @@ public:
     string LastName;
     string Specialization;
     string MedicalSchool;    
+//Constructors
+    Physcian(){
+        cout<< "Physcian does not have attributes"<< endl;
+    };
+    Physcian(string name, int age, string occupation, string lastname, string specialization, string school): Human(name, age){
+        LastName= lastname;
+        Specialization= specialization;
+        MedicalSchool= school;
 
-    void isPatientHealthy(float bmi){
+        cout << "Physcian attributes set" << endl;
+    };
+
+    void introduction(){
+        cout << "Hi, my name is Dr." << Name<< " " << LastName<< endl;
+        cout << "I attended " << MedicalSchool << " where I specialized in " << Specialization<< endl;
+        cout << "I am going to look at your numbers and see what we can do for you" << endl;
+    };
+    void Patient_BMI(float weight_lbs, float height_in){
+    float weight_kg= lb_to_kg(weight_lbs);
+    float height_m= inch_to_cm(height_in);
+    float bmi= patient_bmi(weight_lbs, height_m);
+    
     if (bmi >= 30){
         cout<< "Patient is obese" << endl;
     } else if (bmi < 30 and bmi >=25)
@@ -28,6 +51,7 @@ public:
         cout<<"Patient is healthy" << endl;
     }
 };
+
     int evaluate_bp(int Systolic, int Diastolic ){
         if (Systolic < 120 & Diastolic < 80){
             cout << "Blood pressure is Normal" << endl;
@@ -45,5 +69,12 @@ public:
         
         return 0;
     }
+
+    void check_COVID(list<string> patient_symptoms, list<string> covid_symptoms){
+        
+        
+        if (std::find(begin(patient_symptoms), end(patient_symptoms), myinput) != std::end(patient_symptoms));
+
+    };
 };
 #endif
