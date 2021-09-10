@@ -9,7 +9,6 @@ class Human
 public:
     string Name;
     int Age;
-    
 
     Human(){
         cout << "Human attributes have not been included" << endl;
