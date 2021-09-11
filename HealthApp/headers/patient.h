@@ -5,6 +5,8 @@
 #include "physician.h"
 #include <iostream>
 #include <list>
+#include <vector>
+
 
 using namespace std;
 
@@ -62,6 +64,7 @@ public:
         return weight_lbs;
     } 
 
+    
     void collect_symptoms(){
         //Collect patient symptoms
         cout<<"Input symptoms patient is suffering from. Enter \"-1\" when completed" << endl;
@@ -76,6 +79,22 @@ public:
                 break;
             };
         }}
+    
+    void collect_symptoms2(){
+        cout<<"Input symptoms patient is suffering from. Enter \"-1\" when completed" << endl;
+        
+        vector<string> test;
+        string temp;
+        while (cin >> temp){
+            test.push_back(temp);
+            if (temp== "-1"){
+                temp.pop_back();
+                break;
+            };
+        }
+
+    }
+    
     void verify_symptoms(){
         cout << "Patient Symptoms were input as follows:" << endl;
         for (auto i :Symptoms){
