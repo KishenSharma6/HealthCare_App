@@ -98,11 +98,12 @@ public:
         };
         
         }
-    void read_symptoms(){
+    int read_symptoms(){
         cout << "Patient Symptoms are as follows:" << endl;
         for (auto i :Symptoms){
             cout << i <<endl;
         }
+        return 0;
     }
 };
 
