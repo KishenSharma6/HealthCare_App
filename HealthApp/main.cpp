@@ -6,6 +6,8 @@
 using namespace std;
     
  int main(){
+    vector<string> covid_symptoms{"Chills", "Fatigue", "Soreness", "Fever", "Morose", "Nausea"};
+
     Patient patient1("Henry", 23);
     patient1.introduction();
     patient1.biometrics();
@@ -17,6 +19,5 @@ using namespace std;
     doc1.introduction();
     doc1.Patient_BMI(patient1.return_weight_lbs(), patient1.return_height_inches());
     doc1.evaluate_bp(patient1.return_systolic(), patient1.return_diastolic());
-    
     return 0;
 }

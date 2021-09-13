@@ -14,6 +14,7 @@ using namespace std;
 #define lb_to_kg(x)(x / 2.20462)
 #define patient_bmi(kg, meters)(kg/(meters * meters))
 
+
 class Physcian:public Human{
 public:
     string LastName;
@@ -70,17 +71,7 @@ public:
         return 0;
     }
 
-    // void check_COVID(list<string> patient_symptoms, list<string> covid_symptoms){
-    //     int counter;
-    //     for (_List_iterator i= patient_symptoms.begin(); i != patient_symptoms.end(); i++){
-    //         if (std::find(covid_symptoms.begin(), covid_symptoms.end(), i) != covid_symptoms.end()){
-    //             counter ++;
-    //         }
-    //     }
-    //     if (counter > 3){
-    //         cout << "I am goint to order you a COVID test today just to be safe" << endl;
-    //     } 
+    
+    };
 
-    // };
-};
 #endif
