@@ -9,7 +9,7 @@ using namespace std;
     Patient patient1("Henry", 23);
     patient1.introduction();
     patient1.biometrics();
-    patient1.heart_metrics();
+    patient1.bp_metrics();
     patient1.collect_symptoms();
     patient1.verify_symptoms();
 

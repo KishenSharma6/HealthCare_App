@@ -5,6 +5,8 @@
 #include "physician.h"
 #include <iostream>
 #include <list>
+#include <vector>
+
 
 using namespace std;
 
@@ -15,7 +17,7 @@ private: //Should this information be private?
     int RestHR;
     float height_inches;
     float weight_lbs;
-    list<string> Symptoms;
+    vector<string> Symptoms;
 
 public:   
     //Constructors
@@ -25,16 +27,13 @@ public:
     Patient(string name, int age): Human(name, age){
         cout << "Patient attributes set" << endl;
     };
-    int heart_metrics(){
+    int bp_metrics(){
         //Capture Patient Systolic & Diastolic
         cout << "Enter patient Systolic Blood Pressure:"<<endl;
         cin >> Systolic;
               
         cout << "Enter patient Diastolic Blood Pressure:"<<endl;
         cin >> Diastolic;
-
-        cout << "Enter patient Resting Heart Rate(BPM):"<<endl;
-        cin >> RestHR;
 
         return 0;
     }
@@ -61,25 +60,26 @@ public:
     int return_weight_lbs(){
         return weight_lbs;
     } 
-
+  
     void collect_symptoms(){
-        //Collect patient symptoms
         cout<<"Input symptoms patient is suffering from. Enter \"-1\" when completed" << endl;
         
-        //string termination = "-1";
-        string temp; //Hold user input to append to Symptoms 
-            
-        while (cin >> temp) {
-            Symptoms.push_back(temp);
-            if (temp == "-1"){
-                Symptoms.pop_back();
-                break;
-            };
-        }}
+        string input;
+        while (input != "-1"){
+            cin >> input;
+            cin.ignore();
+            Symptoms.push_back(input);
+            }
+
+        if (input== "-1"){
+            Symptoms.pop_back();
+        }
+        }
+    
     void verify_symptoms(){
         cout << "Patient Symptoms were input as follows:" << endl;
-        for (auto i :Symptoms){
-            cout << i <<endl;
+        for (string i :Symptoms){
+            cout << i << endl ;
         }
 
         cout << "Are these symptoms correct? Y/N" << endl;
